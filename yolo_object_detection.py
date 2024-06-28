@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 #Yolo file paths
-weights_path = "C:/Users/saipr/OneDrive/Desktop/yoloObjectDetection/yolov3.weights"
-config_path = "C:/Users/saipr/OneDrive/Desktop/yoloObjectDetection/yolov3.cfg"
-names_path = "C:/Users/saipr/OneDrive/Desktop/yoloObjectDetection/coco.names"
+weights_path = "C:/Users/chait/OneDrive/Desktop/yoloObjectDetection/yolov3.weights"
+config_path = "C:/Users/chait/OneDrive/Desktop/yoloObjectDetection/yolov3.cfg"
+names_path = "C:/Users/chait/OneDrive/Desktop/yoloObjectDetection/coco.names"
 
 #Loading YOLO
 net = cv2.dnn.readNet(weights_path, config_path)
@@ -15,7 +15,7 @@ layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
 #Loading an image
-img_path = "C:/Users/saipr/OneDrive/Desktop/yoloObjectDetection/Images/bicycle.jpg"
+img_path = "C:/Users/chait/OneDrive/Desktop/yoloObjectDetection/Images/bicycle.jpg"
 img = cv2.imread(img_path)
 height, width, channels = img.shape
 
